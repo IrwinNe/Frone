@@ -1,11 +1,11 @@
 
 header{
-    background-color: #222;
+    background-color: #059154;
     padding: 15px;
     border-radius: 20px;
 }
 body {
-    background-color: #ff0000ea;
+    background-color: #e71212ea;
     color: #333;
 }
 nav ul{
@@ -31,4 +31,8 @@ article{
     margin-bottom: 20px;
     padding: 10px;
     background
+}
+footer{
+    margin: 20px 0;
+    text-align: center;
 }
