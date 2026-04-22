@@ -26,7 +26,7 @@ nav a:hover{
     color: rgb(33, 156, 232);
 }
 section{
-    background-color: #fff;
+    background-color: #c538b0;
     padding: 15px;
     border-radius: 10px;
     margin-top: 20px;
@@ -34,7 +34,7 @@ section{
 article{
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #f4f4f4;
+    background-color: #4ee2a0;
 }
 footer{
     margin: 20px;
