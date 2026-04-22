@@ -1,4 +1,8 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 header{
     background-color: #059154;
     padding: 15px;
