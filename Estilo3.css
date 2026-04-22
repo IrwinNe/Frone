@@ -1,11 +1,11 @@
 
 header{
-    background-color: #222;
+    background-color: #059154;
     padding: 15px;
     border-radius: 20px;
 }
 body {
-    background-color: #55fb2fea;
+    background-color: #e71212ea;
     color: #333;
 }
 nav ul{
@@ -30,9 +30,21 @@ section{
 article{
     margin-bottom: 20px;
     padding: 10px;
-    background
+    background-color: #f4f4f4;
 }
 footer{
-    margin: 20px 0;
+    margin: 20px;
+    padding: 15px;
+    background-color: #222;
+    color: white;
+    border-radius: 10px;
     text-align: center;
+}
+footer a{
+    color: rgb(233, 77, 5);
+    margin: 10px;
+    text-decoration: none;
+}
+footer a:hover{
+    color: rgb(236, 231, 229)
 }
