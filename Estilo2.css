@@ -40,12 +40,12 @@ footer{
     margin: 20px;
     padding: 15px;
     background-color: #222;
-    color: white;
+    color: rgb(216, 235, 133);
     border-radius: 10px;
     text-align: center;
 }
 footer a{
-    color: rgb(233, 77, 5);
+    color: rgb(149, 160, 31);
     margin: 10px;
     text-decoration: none;
 }
