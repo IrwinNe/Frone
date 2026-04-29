@@ -4,13 +4,13 @@
     font-family: Arial, sans-serif;
 }
 header{
-    background-color: #059154;
+    background-color: #7cc4a5;
     padding: 15px;
     border-radius: 20px;
 }
 body {
     background-color: #e71212ea;
-    color: #000000;
+    color: #e2cfcf;
 }
 nav ul{
     list-style: none;

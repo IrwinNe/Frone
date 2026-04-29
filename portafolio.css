@@ -20,3 +20,38 @@ header{
     background: rgb(127, 122, 197);
     border-radius: 8px;
 }
+.logo{
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+}
+.logo:hover{
+    transform: scale(1.5);
+    color: rgb(220, 231, 116);
+}
+.inicio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    padding: 100px 5% 0;
+}
+.inicio-detalle h1{
+    max-width: 44px;
+    background: rgb(20, 112, 1);
+    background-clip: text;
+    color: transparent;
+}
+.inicio-detalle h2{
+    font-size: 18px;
+    color: rgb(119, 208, 211);
+    margin: 20px 0;
+}
+.inicio-detalle p{
+    margin: 20px 0;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: rgba(143, 236, 151, 0.8);
+}
