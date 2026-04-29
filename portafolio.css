@@ -13,3 +13,10 @@ body{
     background: purple;
     padding: 30px;
 }
+header{
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(48, 4, 41);
+    border-radius: 8px;
+}
