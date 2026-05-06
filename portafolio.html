@@ -8,48 +8,89 @@
 </head>
 
 <body>
+
 <center><h1>Portafolio</h1></center>
-   
+
 <header>
+    <h1>Irwin</h1>
     <a href="#" class="logo"></a>
 
     <nav class="navbar">
-        <ul>
-            <li><a href="#" class="active">Inicio</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portafolio</a></li>
-            <li><a href="#">Servicio</a></li>
-            <li><a href="index.html">Maquetación</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
 
+    <!-- ICONO 3 RAYAS -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburguesa">☰</label>
+
+    <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portafolio</a></li>
+        <li><a href="#">Servicio</a></li>
+        <li><a href="index.html">Maquetación</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+</nav>
 </header>
 
-<!-- PORTAFOLIO -->
-<section class="portafolio">
-    <section class="inicio">
-        <div class="inicio-detalle">
-            <h1>Irwin David Quispe Martinez</h1>
-            <h2>Desarrollador Web</h2>
-            <p>
-                Creo sitios web modernos, responsivos y enfocados en la experiencia del usuario.
-            </p>
-        </div>
+<!-- 🔹 PORTADA / INICIO -->
+<section class="inicio">
 
-        <div class="perfil">
-            <img src="images.jpg" alt="Imagen de perfil">
-        </div>
-    </section>
-    <h2>Redes sociales</h2>
+    <!-- TEXTO IZQUIERDA -->
+    <div class="inicio-detalle">
+        <h1>Irwin David Quispe Martinez</h1>
+        <h2>Desarrollador Web</h2>
+        <p>
+            Creo sitios web modernos, responsivos y enfocados en la experiencia del usuario.
+        </p>
+    </div>
+
+    <!-- IMAGEN DERECHA -->
+    <div class="perfil">
+        <img src="images.jpg" alt="Imagen de perfil">
+    </div>
+
+</section>
+
+<!-- 🔹 PORTAFOLIO -->
+<section class="portafolio">
+
+    <h2>Mis Proyectos</h2>
+
+    <div class="grid">
 
         <div class="card">
             <img src="https://via.placeholder.com/300" alt="">
-            <h3>Link de Redes Sociales</h3>
-            <p>En este apartado puedes encontrar los enlaces a mis redes sociales.</p>
-            <nav><a href="Estilo2.css">Facebook</a><a href="Estilo3.css">Twitter</a><a href="Estilo4.css">Instagram</a></nav>
+            <h3>Proyecto 1</h3>
+            <p>Descripción breve del proyecto.</p>
+            <a href="#">Ver más</a>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="">
+            <h3>Proyecto 2</h3>
+            <p>Descripción breve del proyecto.</p>
+            <a href="#">Ver más</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 🔹 REDES SOCIALES -->
+<section class="redes">
+
+    <div class="card">
+        <h3>Redes Sociales</h3>
+        <p>En este apartado puedes encontrar mis redes sociales.</p>
+
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
         </div>
     </div>
+
 </section>
 
 </body>

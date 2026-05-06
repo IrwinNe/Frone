@@ -13,6 +13,61 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* SECCIÓN CONTACTO */
+.contacto {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.contacto h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* FORMULARIO */
+.formulario {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* INPUTS */
+.grupo input,
+.grupo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* EFECTO AL HACER CLICK */
+.grupo input:focus,
+.grupo textarea:focus {
+    border-color: #2a9d8f;
+    box-shadow: 0 0 5px rgba(42,157,143,0.3);
+}
+
+/* BOTÓN */
+.btn-enviar {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #2a9d8f;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #e76f51;
+}
 
 
 body {

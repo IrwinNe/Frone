@@ -1,8 +1,8 @@
 :root {
-    --primario: #2a9d8f;
-    --secundario: #264653;
+    --primario: #25af9f;
+    --secundario: #798d96;
     --fondo: #f8f9fa;
-    --texto: #333;
+    --texto: #5e5252;
     --blanco: #fff;
     --acento: #e76f51;
 }
@@ -20,13 +20,13 @@ body {
     color: var(--texto);
 }
 
-/* HEADER + HERO */
+/* HEADER */
 header {
     background: linear-gradient(135deg, var(--primario), var(--secundario));
     color: white;
-    padding:10px 5px;
+    padding: 15px;
     border-radius: 0 0 20px 20px;
-    text-align: center;
+    text-align: right;
 }
 
 /* LOGO */
@@ -42,13 +42,14 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 15px;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 nav a {
     padding: 10px 20px;
-    background: rgba(255,255,255,0.15);
+    background: rgba(189, 18, 18, 0.15);
     border-radius: 25px;
     color: white;
     text-decoration: none;
@@ -60,43 +61,74 @@ nav a:hover {
     color: var(--primario);
 }
 
-/* HERO */
+/* INICIO (TEXTO IZQ + IMAGEN DER) */
 .inicio {
-    text-align: center;
-    padding: 60px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 5%;
+    flex-wrap: wrap;
 }
 
-.inicio h1 {
+/* TEXTO */
+.inicio-detalle {
+    flex: 1;
+    min-width: 280px;
+}
+
+.inicio-detalle h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.inicio h2 {
+.inicio-detalle h2 {
     font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #ddd;
+    margin-bottom: 15px;
+    color: var(--primario);
 }
 
-.inicio p {
-    max-width: 600px;
-    margin: 0 auto 25px;
+.inicio-detalle p {
+    line-height: 1.6;
+    max-width: 500px;
 }
 
-/* BOTÓN HERO */
+/* IMAGEN PERFIL */
+.perfil {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.perfil img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primario);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.perfil img:hover {
+    transform: scale(1.05);
+    border-color: var(--acento);
+}
+
+/* BOTÓN GENERAL */
 .btn {
     display: inline-block;
+    margin-top: 15px;
     padding: 12px 25px;
-    background: white;
-    color: var(--primario);
+    background: var(--primario);
+    color: white;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: bold;
     transition: 0.3s;
 }
 
 .btn:hover {
     background: var(--acento);
-    color: white;
 }
 
 /* PORTAFOLIO */
@@ -110,14 +142,14 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
-/* GRID DE TARJETAS */
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
-/* TARJETAS */
+/* CARDS */
 .card {
     background: white;
     padding: 20px;
@@ -130,27 +162,12 @@ nav a:hover {
     transform: translateY(-5px);
 }
 
-/* IMAGEN */
 .card img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
 }
-.perfil img {
-    width: 200px;              /* tamaño */
-    height: 200px;
-    transition: 0.3s ease;
-    border-radius: 50%;        /* 👈 hace el círculo */
-    object-fit: cover;         /* evita deformación */
-    border: 4px solid white;   /* borde */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* sombra */
-}
-.perfil img:hover {
-    transform: scale(1.05);
-    border-color: #e76f51;
-}
 
-/* TEXTO */
 .card h3 {
     margin-bottom: 10px;
 }
@@ -160,7 +177,6 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-/* BOTÓN CARD */
 .card a {
     display: inline-block;
     padding: 8px 15px;
@@ -172,4 +188,91 @@ nav a:hover {
 
 .card a:hover {
     background: var(--acento);
+}
+
+/*REDES SOCIALES */
+.redes {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    padding: 10px 20px;
+    background: var(--secundario);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--acento);
+}
+/* OCULTAR CHECKBOX */
+#menu-toggle {
+    display: none;
+}
+
+/* ICONO HAMBURGUESA */
+.hamburguesa {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+}
+
+/* MENÚ NORMAL */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    margin-top: 15px;
+}
+
+/* LINKS */
+.menu a {
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: white;
+    color: #2a9d8f;
+}
+
+/*  RESPONSIVE (MÓVIL) */
+@media (max-width: 768px) {
+
+    .hamburguesa {
+        display: block;
+        text-align: right;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #415b66;
+        padding: 25px;
+        border-radius: 25px;
+        margin-top: 5px;
+    }
+
+    /* cuando se activa el checkbox */
+    #menu-toggle:checked + .hamburguesa + .menu {
+        display: flex;
+    }
 }
