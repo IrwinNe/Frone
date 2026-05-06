@@ -39,7 +39,7 @@ header{
     padding: 100px 5% 0;
 }
 .inicio-detalle h1{
-    max-width: 44px;
+    max-width: 100px;
     background: rgb(20, 112, 1);
     background-clip: text;
     color: transparent;
