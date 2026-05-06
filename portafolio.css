@@ -1,57 +1,175 @@
-*{
-    padding: 0;
+:root {
+    --primario: #2a9d8f;
+    --secundario: #264653;
+    --fondo: #f8f9fa;
+    --texto: #333;
+    --blanco: #fff;
+    --acento: #e76f51;
+}
+
+/* RESET */
+* {
     margin: 0;
-    font-family: 'Times new roman', Times;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    height: 100vh;
-    background: #519fb3;
-    padding:30 px;
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
 }
-.container{
-    height: 100%;
-    background: rgb(187, 137, 114);
-    padding: 30px;
+
+/* HEADER + HERO */
+header {
+    background: linear-gradient(135deg, var(--primario), var(--secundario));
+    color: white;
+    padding:10px 5px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
 }
-header{
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    background: rgb(127, 122, 197);
-    border-radius: 8px;
-}
-.logo{
-    font-size: 26px;
+
+/* LOGO */
+.logo {
+    font-size: 28px;
     font-weight: bold;
-    letter-spacing: 1px;
-    color: #fff;
+    text-decoration: none;
+    color: white;
+}
+
+/* NAV CENTRADO */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    list-style: none;
+}
+
+nav a {
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: var(--primario);
+}
+
+/* HERO */
+.inicio {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.inicio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.inicio h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.inicio p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+/* BOTÓN HERO */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: white;
+    color: var(--primario);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--acento);
+    color: white;
+}
+
+/* PORTAFOLIO */
+.portafolio {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.portafolio h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* GRID DE TARJETAS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* TARJETAS */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGEN */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.perfil img {
+    width: 200px;              /* tamaño */
+    height: 200px;
+    transition: 0.3s ease;
+    border-radius: 50%;        /* 👈 hace el círculo */
+    object-fit: cover;         /* evita deformación */
+    border: 4px solid white;   /* borde */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* sombra */
+}
+.perfil img:hover {
+    transform: scale(1.05);
+    border-color: #e76f51;
+}
+
+/* TEXTO */
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* BOTÓN CARD */
+.card a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: var(--primario);
+    color: white;
+    border-radius: 20px;
     text-decoration: none;
 }
-.logo:hover{
-    transform: scale(1.5);
-    color: rgb(220, 231, 116);
-}
-.inicio{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 100px;
-    padding: 100px 5% 0;
-}
-.inicio-detalle h1{
-    max-width: 100px;
-    background: rgb(20, 112, 1);
-    background-clip: text;
-    color: transparent;
-}
-.inicio-detalle h2{
-    font-size: 18px;
-    color: rgb(119, 208, 211);
-    margin: 20px 0;
-}
-.inicio-detalle p{
-    margin: 20px 0;
-    line-height: 1.6;
-    font-size: 1rem;
-    color: rgba(143, 236, 151, 0.8);
+
+.card a:hover {
+    background: var(--acento);
 }
