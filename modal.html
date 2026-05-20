@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="portafolio.css">
+  </nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio en Modal</title>
+    <style>
+        /* Estilos base para el cuerpo */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #92d8af;
+        }
+
+        /* Estilos del modal */
+        .modal {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7); 
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Contenedor del CV dentro del modal */
+        .modal-contenido {
+            background: rgb(243, 243, 243);
+            padding: 0;
+            border-radius: 12px;
+            width: 95%;
+            max-width: 800px;
+            max-height: 90vh; /* Altura máxima para que no se salga de la pantalla */
+            overflow-y: auto; /* Scroll interno si el contenido es largo */
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        /* Botón de cerrar (X) */
+        .cerrar {
+            position: sticky;
+            top: 10px;
+            float: right;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #333;
+            z-index: 1001;
+            background: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .btn-abrir {
+            background: purple;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-abrir:hover { background: rgb(141, 0, 141); }
+
+        /* --- Estilos de tu Portafolio --- */
+        .inicio { padding: 40px 20px; background: #fafafa; }
+        .inicio-detalle h1 { margin: 0; color: #333; }
+        .inicio-detalle h2 { color: purple; margin-top: 5px; }
+        .perfil img { width: 120px; border-radius: 50%; margin-top: 15px; border: 3px solid purple; }
+        
+        .grid { display: flex; gap: 20px; justify-content: center; padding: 20px; flex-wrap: wrap; }
+        .card { 
+            border: 1px solid #ddd; 
+            padding: 15px; 
+            border-radius: 8px; 
+            width: 250px; 
+            background: rgb(235, 235, 235);
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; border-radius: 5px; }
+        
+        .social-links a { margin: 0 10px; text-decoration: none; color: purple; font-weight: bold; }
+        .redes { padding-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portafolio</a></li>
+        <li><a href="#">Servicio</a></li>
+        <li><a href="index.html">Maquetación</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="modal.html">Modal</a></li>
+    </ul>
+
+    <button class="btn-abrir" id="abrirModal">Ver mi modal</button>
+
+    <div id="miModal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" id="cerrarModal">&times;</span>
+            
+            <div id="cv">
+                <!-- PORTADA -->
+                <section class="inicio">
+                    <div class="inicio-detalle">
+                        <h1>Irwin David Quispe Martinez</h1>
+                        <h2>Desarrollador Web</h2>
+                        <p>Creo sitios web modernos, responsivos y enfocados en la experiencia del usuario.</p>
+                    </div>
+                    <div class="perfil">
+                        <!-- Imagen de placeholder para el ejemplo -->
+                        <img src="images.jpg" alt="Imagen de perfil">
+                    </div>
+                </section>
+
+                <!-- PROYECTOS -->
+                <section class="portafolio">
+                    <h2>Mis Proyectos</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" alt="Proyecto 1">
+                            <h3>NutriZen</h3>
+                            <p>App web para monitoreo calórico y nutrición.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" alt="Proyecto 2">
+                            <h3>Sistemas IoT</h3>
+                            <p>Automatización de riego en Chincha.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- REDES SOCIALES -->
+                <section class="redes">
+                    <div class="card" style="width: 80%; margin: auto;">
+                        <h3>Contacto & Redes</h3>
+                        <div class="social-links">
+                            <a href="#">Facebook</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Instagram</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('miModal');
+        const btnAbrir = document.getElementById('abrirModal');
+        const btnCerrar = document.getElementById('cerrarModal');
+
+        // Abrir modal
+        btnAbrir.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+
+        // Cerrar modal con la X
+        btnCerrar.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Cerrar al hacer clic fuera
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
