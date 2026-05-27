@@ -3,99 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+    <title>Portafolio | Irwin David</title>
     <link rel="stylesheet" href="portafolio.css">
 </head>
-
 <body>
-<center><h1>Portafolio</h1></center>
 
 <header>
-    <button id="descargarPDF">
-        <a href="CV_Irwin_Quispe_Profesional.pdf" download class="btn btn-primary"> descargarCV</a>
-    </button>
-    <h1>Irwin</h1>
-    <a href="#" class="logo"></a>
+    <div class="header-container">
+        <a href="#" class="logo">Irwin.<span>Dev</span></a>
 
-    <nav class="navbar">
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburguesa">☰</label>
 
-    <!-- ICONO 3 RAYAS -->
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburguesa">☰</label>
-
-    <ul class="menu">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portafolio</a></li>
-        <li><a href="#">Servicio</a></li>
-        <li><a href="index.html">Maquetación</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="modal.html">Modal</a></li>
-    </ul>
-
-</nav>
+            <ul class="menu">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Sobre mí</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="index.html">Maquetación</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="CV_Irwin_Quispe_Profesional.pdf" download class="btn-cv">Descargar CV</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<!-- 🔹 PORTADA / INICIO -->
-<section class="inicio">
-
-    <!-- TEXTO IZQUIERDA -->
-    <div class="inicio-detalle">
-        <h1>Irwin David Quispe Martinez</h1>
-        <h2>Desarrollador Web</h2>
-        <p>
-            Creo sitios web modernos, responsivos y enfocados en la experiencia del usuario.
-        </p>
-    </div>
-
-    <!-- IMAGEN DERECHA -->
-    <div class="perfil">
-        <img src="images.jpg" alt="Imagen de perfil">
-    </div>
-
-</section>
-
-<!-- 🔹 PORTAFOLIO -->
-<section class="portafolio">
-
-    <h2>Mis Proyectos</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300" alt="">
-            <h3>Proyecto 1</h3>
-            <p>Descripción breve del proyecto.</p>
-            <a href="#">Ver más</a>
+<main>
+    <section class="inicio">
+        <div class="inicio-content">
+            <div class="inicio-detalle">
+                <h1>Irwin David Quispe Martinez</h1>
+                <h2>Desarrollador Web</h2>
+                <p>
+                    Creo sitios web modernos, responsivos y enfocados en brindar la mejor experiencia de usuario. Especializado en transformar ideas en código limpio.
+                </p>
+                <a href="#proyectos" class="btn">Ver Proyectos</a>
+            </div>
+            
+            <div class="perfil">
+                <img src="images.jpg" alt="Foto de perfil de Irwin Quispe">
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300" alt="">
-            <h3>Proyecto 2</h3>
-            <p>Descripción breve del proyecto.</p>
-            <a href="#">Ver más</a>
+    <section id="proyectos" class="portafolio">
+        <h2>Mis Proyectos</h2>
+        <p class="subtitle">Una muestra de mis últimos trabajos y experimentos técnicos</p>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://via.placeholder.com/300" alt="Miniatura Proyecto 1">
+                </div>
+                <div class="card-body">
+                    <h3>Proyecto Premium</h3>
+                    <p>Una aplicación web moderna con interfaz interactiva y optimización de carga.</p>
+                    <a href="#">Explorar proyecto</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://via.placeholder.com/300" alt="Miniatura Proyecto 2">
+                </div>
+                <div class="card-body">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Diseño de maquetación limpia enfocado en la conversión y adaptabilidad móvil.</p>
+                    <a href="#">Explorar proyecto</a>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- 🔹 REDES SOCIALES -->
-<section class="redes">
-
-    <div class="card">
-        <h3>Redes Sociales</h3>
-        <p>En este apartado puedes encontrar mis redes sociales.</p>
-
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+    <section class="redes">
+        <div class="redes-card">
+            <h3>¿Hablamos?</h3>
+            <p>Encuéntrame en mis redes sociales o conecta conmigo directamente.</p>
+            <div class="social-links">
+                <a href="#" class="sock-link">Facebook</a>
+                <a href="#" class="sock-link">Twitter</a>
+                <a href="#" class="sock-link">Instagram</a>
+            </div>
         </div>
-    </div>
+    </section>
+</main>
 
-</section>
-</div>
+<footer>
+    <p>&copy; 2026 Irwin David Quispe. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>
